@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Folder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,8 @@ Route::get('/', function () {
 
 Route::get('/drive', function () {
     return view('app.drive');
-});
+})->name('drive');
+
+Route::get('/drive/folders/{folder}', function (Folder $folder){
+    return view('app.drive')->with('folder', $folder);
+})->name('drive.folder');

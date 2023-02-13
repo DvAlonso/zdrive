@@ -7,6 +7,7 @@
 
     <title>Laravel</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body class="antialiased" class="h-full">
@@ -315,6 +316,7 @@
         </div>
     </div>
 
+    @livewireScripts
     @stack('scripts')
 </body>
 
